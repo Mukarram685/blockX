@@ -2163,7 +2163,7 @@
         errorLine1="    android:width=&quot;229dp&quot;"
         errorLine2="                   ~~~~~">
         <location
-            file="src/main/res/drawable-night/ic_logo_vertical.xml"
+            file="src/main/res/drawable-night/splash.png"
             line="2"
             column="20"/>
     </issue>
@@ -2174,7 +2174,7 @@
         errorLine1="    android:width=&quot;229dp&quot;"
         errorLine2="                   ~~~~~">
         <location
-            file="src/main/res/drawable/ic_logo_vertical.xml"
+            file="src/main/res/drawable/splash.png"
             line="2"
             column="20"/>
     </issue>

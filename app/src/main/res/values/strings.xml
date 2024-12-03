@@ -446,7 +446,7 @@
     <string name="network">Networks</string>
     <string name="select_active_networks">Select Active Networks</string>
     <string name="title_enabled_networks">Enabled Networks (%s)</string>
-    <string name="collectibles">Collectibles</string>
+    <string name="collectibles">NFT</string> 
     <string name="token_function">Token Function</string>
     <string name="channel_description">Alphawallet notification channel</string>
     <string name="error_camera_permission_denied">Permission to use the camera was denied.</string>
@@ -677,7 +677,7 @@
     <string name="display_tokens">Displayed Tokens</string>
     <string name="hidden_tokens">Hidden Tokens</string>
     <string name="ignore">Ignore</string>
-    <string name="search_for_tokens">Search for Tokens...</string>
+    <string name="search_for_tokens"> Search for Tokens...</string>
     <string name="title_wallet_connect" translatable="false">WalletConnect</string>
     <string name="action_end_session">End Session</string>
     <string name="dialog_send_eth_transaction">Send ETH Transaction</string>
