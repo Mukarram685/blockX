@@ -129,7 +129,6 @@ public class NetworkToggleActivity extends NetworkBaseActivity {
             }
         };
 
-        // Initialize adapters with the updated lists
         mainNetAdapter = new MultiSelectNetworkAdapter(mainNetList, callback);
         mainnetRecyclerView.setAdapter(mainNetAdapter);
 

@@ -6389,14 +6389,7 @@
         message="Found bitmap drawable `res/drawable/palm_logo_test.png` in densityless folder">
         <location
             file="src/main/res/drawable/palm_logo_test.png"/>
-    </issue> 
-
-    <issue
-        id="IconLocation"
-        message="Found bitmap drawable `res/drawable/meta_nova.png` in densityless folder">
-        <location
-            file="src/main/res/drawable/meta_nova.png"/>
-    </issue> 
+    </issue>
 
     <issue
         id="IconLocation"

@@ -34,8 +34,8 @@ public class DappBrowserUtils
     private static final String DAPPS_LIST_FILENAME = "dapps_list.json";
     private static final String MY_DAPPS_FILE = "mydapps";
     private static final String DAPPS_HISTORY_FILE = "dappshistory";
-    private static final String DEFAULT_HOMEPAGE = "https://tokenpanel.blockxnet.com/";
-    private static final String POLYGON_HOMEPAGE = "https://tokenpanel.blockxnet.com/";
+    private static final String DEFAULT_HOMEPAGE = "https://blockxnet.com/";
+    private static final String POLYGON_HOMEPAGE = "https://blockxnet.com/";
 
     //TODO: Move to database
     public static void saveToPrefs(Context context, List<DApp> myDapps)

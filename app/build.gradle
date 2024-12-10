@@ -69,8 +69,8 @@ android {
         applicationId "io.stormbird.wallet"
         minSdk 24
         targetSdk 35
-        versionCode 1
-        versionName "1.0"
+        versionCode 271
+        versionName "3.86"
 
         android.buildFeatures.buildConfig true
 
@@ -135,7 +135,9 @@ android {
         }
     }
     signingConfigs {
-        release {
+      release {
+         // Add below 4 properties into ~/.gradle/gradle.properties
+            // Run ./gradlew assembleRelease to build production apk
             if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
                 storeFile file(MYAPP_UPLOAD_STORE_FILE)
                 storePassword MYAPP_UPLOAD_STORE_PASSWORD
@@ -159,7 +161,6 @@ android {
 
             if (signingConfigs.release.storeFile) {
                 signingConfig signingConfigs.release
-                
             }
         }
     }

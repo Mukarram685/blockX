@@ -24,7 +24,7 @@
 
             <include layout="@layout/item_warning" />
 
-            <!-- <include layout="@layout/item_update" /> -->
+            <include layout="@layout/item_update" />
 
             <com.alphawallet.app.widget.StandardHeader
                 android:id="@+id/layout_header"
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
 
-            <!-- <com.alphawallet.app.widget.StandardHeader
+            <com.alphawallet.app.widget.StandardHeader
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 custom:headerText="@string/support" />
@@ -58,7 +58,7 @@
                 android:id="@+id/layout_settings_support"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" /> -->
+                android:orientation="vertical" />
 
             <RelativeLayout
                 android:id="@+id/layout_version"
@@ -82,6 +82,44 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_tokenscript_compatibility"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?colorSurfaceSecondary"
+                android:paddingLeft="@dimen/standard_16"
+                android:paddingRight="@dimen/standard_16">
+
+                <TextView
+                    style="@style/Aw.Typography.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/tokenscript_compatibility" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        style="@style/Aw.Typography.Sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/version" />
+
+                    <TextView
+                        android:id="@+id/text_tokenscript_compatibility"
+                        style="@style/Aw.Typography.Sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/tiny_8" />
+
+                </LinearLayout>
 
             </RelativeLayout>
 
