@@ -15,9 +15,9 @@
 
         <ImageView
                 android:id="@+id/splash_image"
-                android:layout_width="300dp"
-                android:layout_height="200dp"
-                android:background="@drawable/splash"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="@drawable/meta_nova"
                 android:gravity="center_horizontal" />
 
 
