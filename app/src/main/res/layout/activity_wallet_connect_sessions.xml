@@ -35,7 +35,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+<<<<<<< HEAD
                 android:src="@drawable/meta_nova" />
+=======
+                android:src="@drawable/blockxlogo" />
+>>>>>>> 364a03b2e1148745e7e3ff85fdee9e3762711a50
 
             <TextView
                 android:id="@+id/no_active_sessions_subtext"

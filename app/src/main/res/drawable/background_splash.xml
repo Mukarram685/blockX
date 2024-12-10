@@ -3,8 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:drawable="?android:colorBackground" />
     <item
+<<<<<<< HEAD
         android:drawable="@drawable/meta_nova"
              android:width="180dp"
             android:height="180dp" 
+=======
+        android:drawable="@drawable/splash"
+             android:width="180dp"
+            android:height="80dp" 
+>>>>>>> 364a03b2e1148745e7e3ff85fdee9e3762711a50
         android:gravity="center"/>
 </layer-list>
