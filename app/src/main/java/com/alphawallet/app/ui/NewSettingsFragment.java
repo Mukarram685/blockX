@@ -254,8 +254,8 @@ public class NewSettingsFragment extends BaseFragment
     {
         walletSettingsLayout = view.findViewById(R.id.layout_settings_wallet);
         systemSettingsLayout = view.findViewById(R.id.layout_settings_system);
-        supportSettingsLayout = view.findViewById(R.id.layout_settings_support);
-        updateLayout = view.findViewById(R.id.layout_update);
+        // supportSettingsLayout = view.findViewById(R.id.layout_settings_support);
+        // updateLayout = view.findViewById(R.id.layout_update);
 
         myAddressSetting =
                 new SettingsItemView.Builder(getContext())
@@ -345,12 +345,12 @@ public class NewSettingsFragment extends BaseFragment
                         .withListener(this::onDarkModeSettingClicked)
                         .build();
 
-        supportSetting =
-                new SettingsItemView.Builder(getContext())
-                        .withIcon(R.drawable.ic_settings_support)
-                        .withTitle(R.string.title_support)
-                        .withListener(this::onSupportSettingClicked)
-                        .build();
+        // supportSetting =
+        //         new SettingsItemView.Builder(getContext())
+        //                 .withIcon(R.drawable.ic_settings_support)
+        //                 .withTitle(R.string.title_support)
+        //                 .withListener(this::onSupportSettingClicked)
+        //                 .build();
     }
 
     private void addSettingsToLayout()
@@ -389,7 +389,7 @@ public class NewSettingsFragment extends BaseFragment
 
         systemSettingsLayout.addView(advancedSetting, systemIndex++);
 
-        supportSettingsLayout.addView(supportSetting, supportIndex++);
+        // supportSettingsLayout.addView(supportSetting, supportIndex++);
     }
 
     private void setInitialSettingsData(View view)
