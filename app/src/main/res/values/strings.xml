@@ -106,7 +106,7 @@
     <string name="error_fail_load_tokens">Failed to load tokens list</string>
     <string name="error_create_wallet">Failed to create a wallet</string>
 
-    <string name="app_name" translatable="false">BlockX</string>
+    <string name="app_name" translatable="false">MetaNova</string>
     <string name="all">All</string>
     <string name="currency">Currencies</string>
     <string name="advanced">Advanced Options</string>
@@ -218,7 +218,7 @@
     <string name="eth_per_ticket">%1$s/Ticket</string>
     <string name="ethereum">Ethereum</string>
     <string name="blockx">BlockX</string>
-        <string name="metanova">Metanova</string>
+    <string name="metanova">Metanova</string>
 
     <string name="ethereum_blockchain">Ethereum Blockchain</string>
     <string name="issuer">Issuer:</string>

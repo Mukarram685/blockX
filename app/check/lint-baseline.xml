@@ -2163,7 +2163,7 @@
         errorLine1="    android:width=&quot;229dp&quot;"
         errorLine2="                   ~~~~~">
         <location
-            file="src/main/res/drawable-night/splash.png"
+            file="src/main/res/drawable-night/meta_nova.png"
             line="2"
             column="20"/>
     </issue>
@@ -2174,7 +2174,7 @@
         errorLine1="    android:width=&quot;229dp&quot;"
         errorLine2="                   ~~~~~">
         <location
-            file="src/main/res/drawable/splash.png"
+            file="src/main/res/drawable/meta_nova.png"
             line="2"
             column="20"/>
     </issue>
@@ -6393,9 +6393,9 @@
 
     <issue
         id="IconLocation"
-        message="Found bitmap drawable `res/drawable/blockxlogo.png` in densityless folder">
+        message="Found bitmap drawable `res/drawable/meta_nova.png` in densityless folder">
         <location
-            file="src/main/res/drawable/blockxlogo.png"/>
+            file="src/main/res/drawable/meta_nova.png"/>
     </issue> 
 
     <issue

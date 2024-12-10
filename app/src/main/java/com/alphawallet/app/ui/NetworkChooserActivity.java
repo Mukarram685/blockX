@@ -89,7 +89,7 @@ public class NetworkChooserActivity extends NetworkBaseActivity implements TestN
 
         for (NetworkInfo info : availableNetworks)
         {
-            mainNetList.add(new NetworkItem(info.name, info.chainId, selectedNetwork.equals(info.chainId)));
+            mainNetList.add(new NetworkItem(info.name, info.chainId, selectedNetwork.equals(info.chainId),0));
         }
 
         networkAdapter = new SingleSelectNetworkAdapter(mainNetList);
