@@ -133,7 +133,6 @@
     <string name="action_purchase">Purchase</string>
     <string name="toolbar_header_wallet">Wallet</string>
     <string name="toolbar_header_settings">Settings</string>
-    <string name="tokenpanel">Tokenpanel</string>
     <string name="toolbar_header_help">Help \u0026 FAQ</string>
     <string name="toolbar_header_transactions">Transactions</string>
     <string name="settings_my_wallet_address">My Wallet Address</string>
@@ -217,13 +216,7 @@
     <string name="appreciation">Appreciation</string>
     <string name="eth_per_ticket">%1$s/Ticket</string>
     <string name="ethereum">Ethereum</string>
-<<<<<<< HEAD
     <string name="blockx">MetaNova</string>
-=======
-    <string name="blockx">BlockX</string>
-        <string name="metanova">Metanova</string>
-
->>>>>>> 364a03b2e1148745e7e3ff85fdee9e3762711a50
     <string name="ethereum_blockchain">Ethereum Blockchain</string>
     <string name="issuer">Issuer:</string>
     <string name="root_title">DEVICE SECURITY COMPROMISED</string>
