@@ -106,7 +106,7 @@
     <string name="error_fail_load_tokens">Failed to load tokens list</string>
     <string name="error_create_wallet">Failed to create a wallet</string>
 
-    <string name="app_name" translatable="false">MetaNova</string>
+    <string name="app_name" translatable="false">BlockX</string>
     <string name="all">All</string>
     <string name="currency">Currencies</string>
     <string name="advanced">Advanced Options</string>
@@ -216,7 +216,6 @@
     <string name="appreciation">Appreciation</string>
     <string name="eth_per_ticket">%1$s/Ticket</string>
     <string name="ethereum">Ethereum</string>
-    <string name="blockx">MetaNova</string>
     <string name="ethereum_blockchain">Ethereum Blockchain</string>
     <string name="issuer">Issuer:</string>
     <string name="root_title">DEVICE SECURITY COMPROMISED</string>
@@ -238,7 +237,6 @@
     <string name="wallet_label">Wallet</string>
     <string name="tx_label">Transactions</string>
     <string name="browser_label">Browser</string>
-    <string name="metanova">Metanova</string>
     <string name="settings_label">Settings</string>
     <string name="activity_label">Activity</string>
     <string name="toolbar_header_importing_tickets">Importing Tokens</string>
@@ -602,7 +600,6 @@
     <string name="title_biometrics">Passcode / Touch ID</string>
     <string name="title_advanced">Advanced</string>
     <string name="title_support">Support</string>
-    <string name="tokenpanel">TokenPanel</string>
     <string name="title_blog">Blog</string>
     <string name="title_faq">FAQ</string>
     <string name="title_console">Console</string>

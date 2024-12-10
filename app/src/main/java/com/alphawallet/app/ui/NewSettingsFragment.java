@@ -254,8 +254,8 @@ public class NewSettingsFragment extends BaseFragment
     {
         walletSettingsLayout = view.findViewById(R.id.layout_settings_wallet);
         systemSettingsLayout = view.findViewById(R.id.layout_settings_system);
-        // supportSettingsLayout = view.findViewById(R.id.layout_settings_support);
-        // updateLayout = view.findViewById(R.id.layout_update);
+        supportSettingsLayout = view.findViewById(R.id.layout_settings_support);
+        updateLayout = view.findViewById(R.id.layout_update);
 
         myAddressSetting =
                 new SettingsItemView.Builder(getContext())
@@ -345,12 +345,12 @@ public class NewSettingsFragment extends BaseFragment
                         .withListener(this::onDarkModeSettingClicked)
                         .build();
 
-        // supportSetting =
-        //         new SettingsItemView.Builder(getContext())
-        //                 .withIcon(R.drawable.ic_settings_support)
-        //                 .withTitle(R.string.title_support)
-        //                 .withListener(this::onSupportSettingClicked)
-        //                 .build();
+        supportSetting =
+                new SettingsItemView.Builder(getContext())
+                        .withIcon(R.drawable.ic_settings_support)
+                        .withTitle(R.string.title_support)
+                        .withListener(this::onSupportSettingClicked)
+                        .build();
     }
 
     private void addSettingsToLayout()
@@ -389,15 +389,15 @@ public class NewSettingsFragment extends BaseFragment
 
         systemSettingsLayout.addView(advancedSetting, systemIndex++);
 
-        // supportSettingsLayout.addView(supportSetting, supportIndex++);
+        supportSettingsLayout.addView(supportSetting, supportIndex++);
     }
 
     private void setInitialSettingsData(View view)
     {
         TextView appVersionText = view.findViewById(R.id.text_version);
         appVersionText.setText(String.format(Locale.getDefault(), "%s (%d)", BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE));
-        // TextView tokenScriptVersionText = view.findViewById(R.id.text_tokenscript_compatibility);
-        // tokenScriptVersionText.setText(TOKENSCRIPT_CURRENT_SCHEMA);
+        TextView tokenScriptVersionText = view.findViewById(R.id.text_tokenscript_compatibility);
+        tokenScriptVersionText.setText(TOKENSCRIPT_CURRENT_SCHEMA);
     }
 
     private void openShowSeedPhrase(Wallet wallet)
@@ -640,11 +640,11 @@ public class NewSettingsFragment extends BaseFragment
         startActivity(intent);
     }
 
-    // private void onSupportSettingClicked()
-    // {
-    //     Intent intent = new Intent(getActivity(), SupportSettingsActivity.class);
-    //     startActivity(intent);
-    // }
+    private void onSupportSettingClicked()
+    {
+        Intent intent = new Intent(getActivity(), SupportSettingsActivity.class);
+        startActivity(intent);
+    }
 
     private void onWalletConnectSettingClicked()
     {

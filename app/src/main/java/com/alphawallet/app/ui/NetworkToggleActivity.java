@@ -52,17 +52,8 @@ public class NetworkToggleActivity extends NetworkBaseActivity
 
     private void setupFilterList()
     {
-    // Get the existing network lists
         List<NetworkItem> mainNetList = viewModel.getNetworkList(true);
         List<NetworkItem> testNetList = viewModel.getNetworkList(false);
-
-    // Add BlockX and MetaNova at the top of the mainNetList
-    NetworkItem blockXNetwork = new NetworkItem(String.valueOf("BlockX MainNet"),19191L, true); // Always selected
-    NetworkItem metaNovaNetwork = new NetworkItem(String.valueOf("MetaNova Verse"),10096L, true); // Always selected
-
-    // Ensure these are added at the top of the list
-        mainNetList.add(0, blockXNetwork);
-        mainNetList.add(1, metaNovaNetwork);
 
         MultiSelectNetworkAdapter.Callback callback = new MultiSelectNetworkAdapter.Callback()
         {
@@ -115,16 +106,10 @@ public class NetworkToggleActivity extends NetworkBaseActivity
             @Override
             public void onCheckChanged(long chainId, int count)
             {
-            // Prevent unselecting BlockX and MetaNova
-            if (String.valueOf(chainId).equals("19191") || String.valueOf(chainId).equals("10096"))
-            {
-                return; // Ignore any changes to these items
-            }
                 updateTitle();
             }
         };
 
-    // Initialize adapters with the updated lists
         mainNetAdapter = new MultiSelectNetworkAdapter(mainNetList, callback);
         mainnetRecyclerView.setAdapter(mainNetAdapter);
 
@@ -133,8 +118,6 @@ public class NetworkToggleActivity extends NetworkBaseActivity
 
         updateTitle();
     }
-
-
 
     @Override
     protected void updateTitle()
@@ -169,5 +152,4 @@ public class NetworkToggleActivity extends NetworkBaseActivity
         setResult(RESULT_OK, new Intent());
         finish();
     }
-
 }

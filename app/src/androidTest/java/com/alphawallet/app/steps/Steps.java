@@ -299,7 +299,7 @@ public class Steps
     public static void navigateToBrowser()
     {
         //clickMadly(withId(R.id.nav_browser_text));
-        clickMadly(withText(R.string.metanova));
+        clickMadly(withText(R.string.browser_label));
         //click(withId(R.id.nav_browser_text), 20);
     }
 
