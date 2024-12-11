@@ -1,10 +1,8 @@
 package com.alphawallet.app.widget;
-
 import static androidx.core.content.ContextCompat.getColorStateList;
 import static com.alphawallet.app.util.Utils.ALPHAWALLET_REPO_NAME;
 import static com.alphawallet.app.util.Utils.TRUST_ICON_REPO_BASE;
 import static com.alphawallet.ethereum.EthereumNetworkBase.MAINNET_ID;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -45,9 +43,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.DrawableImageViewTarget;
 import com.bumptech.glide.request.target.Target;
-
 import org.jetbrains.annotations.NotNull;
-
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;

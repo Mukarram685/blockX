@@ -292,7 +292,7 @@ public class HomeActivity extends BaseNavigationActivity implements View.OnClick
                 });
 
         viewModel.tryToShowRateAppDialog(this);
-        viewModel.tryToShowEmailPrompt(this, successOverlay, handler, this);
+//        viewModel.tryToShowEmailPrompt(this, successOverlay, handler, this);
 
         if (Utils.verifyInstallerId(this))
         {

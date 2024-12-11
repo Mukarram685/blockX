@@ -8095,7 +8095,7 @@
             column="18"/>
     </issue>
 
-    <issue
+    <!-- <issue
         id="RelativeOverlap"
         message="`LinearLayout-3` can overlap `TextView-1` if @string/tokenscript_compatibility, LinearLayout-3 grow due to localized text expansion"
         errorLine1="                &lt;LinearLayout"
@@ -8104,7 +8104,7 @@
             file="src/main/res/layout/fragment_settings.xml"
             line="115"
             column="18"/>
-    </issue>
+    </issue> -->
 
     <issue
         id="RelativeOverlap"
