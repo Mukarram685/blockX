@@ -35,6 +35,10 @@
                 app:showSwitch="false" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/main_list2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />\        
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/main_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

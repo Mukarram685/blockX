@@ -24,8 +24,8 @@ import java.util.List;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class NetworkChooserActivity extends NetworkBaseActivity implements TestNetDialog.TestNetDialogCallback
-{
+public class NetworkChooserActivity extends NetworkBaseActivity implements TestNetDialog.TestNetDialogCallback {
+
     private static final int REQUEST_SELECT_ACTIVE_NETWORKS = 2000;
 
     boolean localSelectionMode;
@@ -33,9 +33,7 @@ public class NetworkChooserActivity extends NetworkBaseActivity implements TestN
     private SingleSelectNetworkAdapter networkAdapter;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState)
-    {
-
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         viewModel = new ViewModelProvider(this)
@@ -44,52 +42,43 @@ public class NetworkChooserActivity extends NetworkBaseActivity implements TestN
         prepare(getIntent());
     }
 
-    void prepare(Intent intent)
-    {
-        if (intent == null)
-        {
+    void prepare(Intent intent) {
+        if (intent == null) {
             finish();
             return;
         }
 
         long selectedChainId = intent.getLongExtra(C.EXTRA_CHAIN_ID, -1);
 
-        // Previous active network was deselected, get the first item in filtered networks
-        if (selectedChainId == -1)
-        {
+        if (selectedChainId == -1) {
             selectedChainId = viewModel.getSelectedNetwork();
-        } //try network from settings
-        if (selectedChainId == -1
-                || !viewModel.getFilterNetworkList().contains(selectedChainId))
-        {
+        }
+
+        if (selectedChainId == -1 || !viewModel.getFilterNetworkList().contains(selectedChainId)) {
             selectedChainId = viewModel.getFilterNetworkList().get(0);
-        } //use first network known on list if there's still any kind of issue
+        }
 
         setTitle(getString(R.string.select_dappbrowser_network));
 
         hideSwitch();
         List<NetworkInfo> filteredNetworks = new ArrayList<>();
-        for (Long chainId : viewModel.getFilterNetworkList())
-        {
+        for (Long chainId : viewModel.getFilterNetworkList()) {
             filteredNetworks.add(viewModel.getNetworkByChain(chainId));
         }
 
         setupList(selectedChainId, filteredNetworks);
     }
 
-    void setupList(Long selectedNetwork, List<NetworkInfo> availableNetworks)
-    {
+    void setupList(Long selectedNetwork, List<NetworkInfo> availableNetworks) {
         initViews();
         setupFilters(selectedNetwork, availableNetworks);
     }
 
-    private void setupFilters(Long selectedNetwork, List<NetworkInfo> availableNetworks)
-    {
+    private void setupFilters(Long selectedNetwork, List<NetworkInfo> availableNetworks) {
         ArrayList<NetworkItem> mainNetList = new ArrayList<>();
 
-        for (NetworkInfo info : availableNetworks)
-        {
-            mainNetList.add(new NetworkItem(info.name, info.chainId, selectedNetwork.equals(info.chainId),0));
+        for (NetworkInfo info : availableNetworks) {
+            mainNetList.add(new NetworkItem(info.name, info.chainId, selectedNetwork.equals(info.chainId)));
         }
 
         networkAdapter = new SingleSelectNetworkAdapter(mainNetList);
@@ -97,10 +86,8 @@ public class NetworkChooserActivity extends NetworkBaseActivity implements TestN
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        if (!localSelectionMode && !CustomViewSettings.showAllNetworks())
-        {
+    public boolean onCreateOptionsMenu(Menu menu) {
+        if (!localSelectionMode && !CustomViewSettings.showAllNetworks()) {
             MenuInflater inflater = getMenuInflater();
             inflater.inflate(R.menu.menu_filter_network, menu);
         }
@@ -108,38 +95,28 @@ public class NetworkChooserActivity extends NetworkBaseActivity implements TestN
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        if (item.getItemId() == R.id.action_filter)
-        {
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_filter) {
             viewModel.openSelectNetworkFilters(this, REQUEST_SELECT_ACTIVE_NETWORKS);
-        }
-        else
-        {
+        } else {
             super.onOptionsItemSelected(item);
         }
         return true;
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
-    {
-        if (requestCode == REQUEST_SELECT_ACTIVE_NETWORKS)
-        {
-            if (resultCode == RESULT_OK)
-            {
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == REQUEST_SELECT_ACTIVE_NETWORKS) {
+            if (resultCode == RESULT_OK) {
                 prepare(data);
             }
-        }
-        else
-        {
+        } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
 
     @Override
-    protected void handleSetNetworks()
-    {
+    protected void handleSetNetworks() {
         long selectedNetwork = networkAdapter.getSelectedItem();
         Intent intent = new Intent();
         intent.putExtra(C.EXTRA_CHAIN_ID, selectedNetwork);
@@ -147,4 +124,3 @@ public class NetworkChooserActivity extends NetworkBaseActivity implements TestN
         finish();
     }
 }
-

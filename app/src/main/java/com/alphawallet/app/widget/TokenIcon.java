@@ -179,7 +179,7 @@ public class TokenIcon extends ConstraintLayout
     public void bindData(Token token)
     {
         this.token = token;
-        clearLoad();
+        clearLoad(); 
 
         if (token.isEthereum())
         {
@@ -202,7 +202,18 @@ public class TokenIcon extends ConstraintLayout
     public void bindData(long chainId)
     {
         clearLoad();
+        
+         if (chainId == 19191L) {
+        loadImageFromResource(R.drawable.blockxlogo); // Add BlockX logo to your drawable resources
+    } else if (chainId == 10096L) {
+        loadImageFromResource(R.drawable.metanova_icon); // Add MetaNova logo to your drawable resources
+    } else if (chainId == 0L) {
+        loadImageFromResource(R.drawable.bitcoin); // Add Bitcoin logo to your drawable resources
+    }
+    else{
         loadImageFromResource(EthereumNetworkRepository.getChainLogo(chainId));
+    }
+        
     }
 
     private void bind(Token token, String iconUrl)

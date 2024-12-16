@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alphawallet.app.R;
+
 import com.alphawallet.app.repository.PreferenceRepositoryType;
 import com.alphawallet.app.widget.StandardHeader;
 import com.alphawallet.app.widget.TestNetDialog;
@@ -22,6 +23,7 @@ import javax.inject.Inject;
 public abstract class NetworkBaseActivity extends BaseActivity implements TestNetDialog.TestNetDialogCallback
 {
     RecyclerView mainnetRecyclerView;
+    RecyclerView mainnetRecyclerView2;
     RecyclerView testnetRecyclerView;
     StandardHeader mainnetHeader;
     StandardHeader testnetHeader;
@@ -89,9 +91,11 @@ public abstract class NetworkBaseActivity extends BaseActivity implements TestNe
 
         testnetSwitch = testnetHeader.getSwitch();
 
+        mainnetRecyclerView2 = findViewById(R.id.main_list2);
         mainnetRecyclerView = findViewById(R.id.main_list);
         testnetRecyclerView = findViewById(R.id.test_list);
 
+        mainnetRecyclerView2.setLayoutManager(new LinearLayoutManager(this));
         mainnetRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         testnetRecyclerView.setLayoutManager(new LinearLayoutManager(this));
