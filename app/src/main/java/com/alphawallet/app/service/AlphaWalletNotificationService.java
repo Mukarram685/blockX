@@ -26,7 +26,7 @@ import timber.log.Timber;
 
 public class AlphaWalletNotificationService
 {
-    private static final String BASE_API_URL = BuildConfig.NOTIFICATION_API_BASE_URL;
+    private static final String BASE_API_URL = BuildConfig.NOTIFICATION_API_BASE_URL ;
     public static final String SUBSCRIPTIONS_API_PATH = BASE_API_URL + "/subscriptions";
     private final OkHttpClient httpClient;
     private final WalletRepositoryType walletRepository;
