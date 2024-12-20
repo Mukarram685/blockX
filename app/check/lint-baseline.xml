@@ -6598,7 +6598,7 @@
             line="13"
             column="10"/>
     </issue>
-
+<!-- 
     <issue
         id="ViewConstructor"
         message="Custom view `EmailPromptView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
@@ -6608,7 +6608,7 @@
             file="src/main/java/com/alphawallet/app/widget/EmailPromptView.java"
             line="32"
             column="14"/>
-    </issue>
+    </issue> -->
 
     <issue
         id="ViewConstructor"
@@ -7487,7 +7487,7 @@
         <location
             file="src/main/res/layout/layout_manage_tokens_with_buy.xml"
             line="17"
-            column="6"/>
+            column="6"/> 
     </issue>
 
     <issue

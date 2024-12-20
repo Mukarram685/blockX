@@ -52,15 +52,15 @@ public class NetworkToggleActivity extends NetworkBaseActivity {
         List<NetworkItem> testNetList = viewModel.getNetworkList(false);
 
         // Add BlockX, MetaNova, and Bitcoin at the top of the mainNetList with their icons
-        NetworkItem blockXNetwork = new NetworkItem(
-            "BlockX MainNet", 
-            19191L, 
+        NetworkItem metaNovaNetwork = new NetworkItem(
+            "MetaNova Verse Testnet", 
+            10096L, 
             true
         );
 
-        NetworkItem metaNovaNetwork = new NetworkItem(
-            "MetaNova Verse", 
-            10096L, 
+        NetworkItem blockXNetwork = new NetworkItem(
+            "BlockX MainNet", 
+            19191L, 
             true
         );
 
@@ -71,8 +71,8 @@ public class NetworkToggleActivity extends NetworkBaseActivity {
         );
 
         // Ensure these are added at the top of the list
-        mainNetList.add(0, blockXNetwork);
-        mainNetList.add(1, metaNovaNetwork);
+        mainNetList.add(0, metaNovaNetwork);
+        mainNetList.add(1, blockXNetwork);
         mainNetList.add(2, bitcoinNetwork);
 
         MultiSelectNetworkAdapter.Callback callback = new MultiSelectNetworkAdapter.Callback() {
